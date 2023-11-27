@@ -1,5 +1,5 @@
 * {
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -7,8 +7,8 @@ body {
 }
 
 button {
-    width: 8vw;
-    height: 4vh;
+    width: 7vw;
+    height: 5vh;
     border: none;
     border-radius: 10px;
     color: black;
@@ -19,19 +19,28 @@ button {
     align-items: center;
     width: 100vw;
     height: 15vh;
-    background-color: red;
+    background-color: #5F6F52;
     margin: 0;
     padding: 0;
+}
+
+#navBar h1 {
+    color:#FEFAE0;
 }
 
 #btnContainer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 26vw;
-    height: 6vh;
-    background-color: white;
+    width: 30vw;
+    height: 7.5vh;
+    background-color: #B99470;
     border-radius: 15px;
+    flex: 2;
+}
+
+#btnContainer button {
+    color: #5F6F52;
 }
 
 #bodyContent {
@@ -39,7 +48,7 @@ button {
     align-items: center;
     width: 100vw;
     height: 75vh;
-    background-color: green;
+    background-color: #A9B388;
     margin: 0;
     padding: 0;
 }
@@ -49,7 +58,28 @@ button {
     align-items: center;
     width: 100vw;
     height: 10vh;
-    background-color: blue;
+    background-color: #FEFAE0;
     margin: 0;
     padding: 0;
+}
+
+.logoImg {
+    width: 100px;
+    height: 100px;
+    margin-left: 4vw;
+    border-radius: 50%;
+    
+}
+
+.logoName {
+    flex: 4;
+    margin-left: 1vw;
+    font-size: 3rem;
+}
+
+.loginBtn {
+    flex: 1;
+    max-width: 10vw;
+    margin-left: 3vw;
+    margin-right: 4vw;
 }
