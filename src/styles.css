@@ -7,8 +7,8 @@ body {
 }
 
 button {
-    width: 8vw;
-    height: 4vh;
+    width: 7vw;
+    height: 5vh;
     border: none;
     border-radius: 10px;
     color: black;
@@ -28,10 +28,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 26vw;
-    height: 6vh;
+    width: 30vw;
+    height: 7.5vh;
     background-color: white;
     border-radius: 15px;
+    flex: 2;
 }
 
 #bodyContent {
@@ -52,4 +53,24 @@ button {
     background-color: blue;
     margin: 0;
     padding: 0;
+}
+
+.logoImg {
+    width: 5vw;
+    height: auto;
+    flex: 1;
+    margin-left: 5vw;
+}
+
+.logoName {
+    flex: 4;
+    margin-left: -6vw;
+    font-size: 3rem;
+}
+
+.loginBtn {
+    flex: 1;
+    max-width: 10vw;
+    margin-left: 3vw;
+    margin-right: 4vw;
 }

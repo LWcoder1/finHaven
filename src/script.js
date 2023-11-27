@@ -16,6 +16,8 @@ footer.id = "footer";
 //children of navBar
 const logoImg = document.createElement('img');
 logoImg.className = "logoImg";
+logoImg.src = './images/logo.png';
+logoImg.alt = "logo-img";
 const logoName = document.createElement('h1');
 logoName.className = "logoName";
 logoName.textContent = "FinHaven";
