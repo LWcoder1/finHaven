@@ -1,15 +1,15 @@
 import './styles.css';
 
+function combine(obj1, ...manyargs) {
+  for (let obj of manyargs) {
+    obj1.appendChild(obj);
+  }
+}
+
 // Delete with implementation
 const navBar = document.createElement("div");
 const body = document.createElement("div");
 const footer = document.createElement("div");
-
-function combine(obj1, ...manyargs) {
-    for (let obj of manyargs) {
-      obj1.appendChild(obj);
-    }
-}
 
 combine(document.body, navBar, body, footer);
 navBar.setAttribute("id", "navBar");
@@ -20,7 +20,7 @@ function main() {
   //children of navBar
   const logoImg = document.createElement('img');
   logoImg.className = "logoImg";
-  logoImg.src = "/Users/liangquanwu/teamProjects/finHaven/src/img/snakeImg.png";
+  logoImg.src = "../src/img/shark.jpeg";
 
   const logoName = document.createElement('h1');
   logoName.className = "logoName";
@@ -52,7 +52,6 @@ function main() {
 
 
 function aboutUsPage() {
-
     const ourTeam = document.createElement("div");
     ourTeam.classList.add("ourTeam");
     const contactInfo = document.createElement("div");
@@ -89,5 +88,6 @@ function aboutUsPage() {
     combine(body, ourTeam, contactInfo, ourMission);
 }
 
-
 main();
+
+
