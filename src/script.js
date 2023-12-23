@@ -11,10 +11,26 @@ const navBar = document.createElement("div");
 const body = document.createElement("div");
 const footer = document.createElement("div");
 
+<<<<<<< HEAD
 combine(document.body, navBar, body, footer);
 navBar.setAttribute("id", "navBar");
 body.setAttribute("id", "bodyContent");
 footer.setAttribute("id", "footer");
+=======
+//children of navBar
+const logoImg = document.createElement('img');
+logoImg.className = "logoImg";
+logoImg.src = './images/logo.png';
+logoImg.alt = "logo-img";
+const logoName = document.createElement('h1');
+logoName.className = "logoName";
+logoName.textContent = "FinHaven";
+const btnContainer = document.createElement('div')
+btnContainer.id = "btnContainer";
+const loginBtn = document.createElement('button');
+loginBtn.className = "loginBtn";
+loginBtn.textContent = "Log in";
+>>>>>>> testing
 
 function main() {
   //children of navBar

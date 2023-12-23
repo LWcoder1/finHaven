@@ -34,6 +34,7 @@ button {
     justify-content: space-around;
     width: 30vw;
     height: 7.5vh;
+<<<<<<< HEAD
     border-radius: 15px;
     flex: 2;
 }
@@ -42,6 +43,11 @@ button {
     background-color: #C5DFF8;
     color: #4A55A2;
     font-size: 16px;
+=======
+    background-color: white;
+    border-radius: 15px;
+    flex: 2;
+>>>>>>> testing
 }
 
 #bodyContent {
@@ -65,15 +71,26 @@ button {
 }
 
 .logoImg {
+<<<<<<< HEAD
     width: 100px;
     height: 100px;
     margin-left: 4vw;
     border-radius: 50%;
+=======
+    width: 5vw;
+    height: auto;
+    flex: 1;
+    margin-left: 5vw;
+>>>>>>> testing
 }
 
 .logoName {
     flex: 4;
+<<<<<<< HEAD
     margin-left: 1vw;
+=======
+    margin-left: -6vw;
+>>>>>>> testing
     font-size: 3rem;
 }
 
@@ -82,7 +99,11 @@ button {
     max-width: 10vw;
     margin-left: 3vw;
     margin-right: 4vw;
+<<<<<<< HEAD
     background-color: #C5DFF8;
     color: #4A55A2;
     font-size: 16px;
 }
+=======
+}
+>>>>>>> testing
