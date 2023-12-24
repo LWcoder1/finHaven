@@ -86,6 +86,7 @@ function aboutUsPage() {
     ourMission.appendChild(ourMissionH1); 
 
     combine(body, ourTeam, contactInfo, ourMission);
+    console.log("testing");
 }
 
 main();
