@@ -1,9 +1,21 @@
 import './styles.css';
 
 function combine(obj1, ...manyargs) {
-  for (let obj of manyargs) {
-    obj1.appendChild(obj);
+    for (let obj of manyargs) {
+      obj1.appendChild(obj);
   }
+}
+
+function objectTxtCreator(typeOfObj, txt) {
+    let newObj = document.createElement(typeOfObj);
+    newObj.textContent = txt;
+    return newObj;
+}
+
+function objectClassCreator(typeOfObj, newClass) {
+    let newObj = document.createElement(typeOfObj);
+    newObj.classList.add(newClass);
+    return newObj;
 }
 
 // Delete with implementation
@@ -90,43 +102,43 @@ function main() {
 }
 
 function aboutUsPage() {
-    const ourTeam = document.createElement("div");
-    ourTeam.classList.add("ourTeam");
-    const contactInfo = document.createElement("div");
-    const ourMission = document.createElement("div");
+    const aboutUsPage = objectClassCreator("div", "aboutUsPage");
 
-    // ourTeamH1
+    const aboutUsOurTeamDiv = objectClassCreator("div", "ourTeamDiv");
 
-    const ourTeamH1 = document.createElement("h1");
-    ourTeamH1.textContent = "Our Team";
-    ourTeam.appendChild(ourTeamH1);
+    const aboutUsOurTeamH1 = objectTxtCreator("h1", "Our Team")
 
-    const ourTeamLarryDiv = document.createElement("div");
-    const ourTeamLarryImg = document.createElement("div");
-    const ourTeamLarryIntro = document.createElement("div");
-    combine(ourTeamLarryDiv, ourTeamLarryImg, ourTeamLarryIntro);
+    const aboutUsOurTeamDivWrapper = objectClassCreator("div", "ourTeamDivWrapper");
+    
 
-    const ourTeamLianDiv = document.createElement("div");
-    const ourTeamLianImg = document.createElement("div");
-    const ourTeamLianIntro = document.createElement("div")
-    combine(ourTeamLianDiv, ourTeamLianImg, ourTeamLianIntro);
+    const aboutUsOurTeamLarryImg = document.createElement("img");
+    aboutUsOurTeamLarryImg.src = "/Users/liangquanwu/teamProjects/finHaven/src/img/snakeImg.png";
+    const aboutUsOurTeanLianImg = document.createElement("img");
+    aboutUsOurTeanLianImg.src = "/Users/liangquanwu/teamProjects/finHaven/src/img/snakeImg.png";
 
-    combine(ourTeam, ourTeamLarryDiv, ourTeamLianDiv);
+    const aboutUsOurTeamLarryDiv = document.createElement("div");
+    const aboutUsOurTeamLarryDivH1 = objectTxtCreator("h1", "Larry Wu")
+    const aboutUsOurTeamLarryDivP = objectTxtCreator("p", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque metus eros, condimentum sit amet augue vel, dictum porta justo. Proin dui enim, finibus quis volutpat id, bibendum sed dolor. Phasellus in libero elit. Duis condimentum imperdiet dignissim. Morbi justo massa, accumsan sit amet pellentesque ut, suscipit at ante. Vivamus varius quam vel finibus condimentum. Nunc posuere quam risus. Phasellus cursus consequat nulla sed pulvinar.");
+    combine(aboutUsOurTeamLarryDiv, aboutUsOurTeamLarryDivH1, aboutUsOurTeamLarryDivP);
 
-    // contactInfo
+    const aboutUsOurTeamLianDiv = document.createElement("div");
+    const aboutUsOurTeamLianDivH1 = objectTxtCreator("h1", "Lian Jung")
+    const aboutUsOurTeamLianDivP = objectTxtCreator("p", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque metus eros, condimentum sit amet augue vel, dictum porta justo. Proin dui enim, finibus quis volutpat id, bibendum sed dolor. Phasellus in libero elit. Duis condimentum imperdiet dignissim. Morbi justo massa, accumsan sit amet pellentesque ut, suscipit at ante. Vivamus varius quam vel finibus condimentum. Nunc posuere quam risus. Phasellus cursus consequat nulla sed pulvinar.");
+    combine(aboutUsOurTeamLianDiv,aboutUsOurTeamLianDivH1, aboutUsOurTeamLianDivP);
 
-    const contactInfoH1 = document.createElement("h1");
-    contactInfoH1.textContent = "Contact Info";
-    contactInfo.appendChild(contactInfoH1);
+    combine(aboutUsOurTeamDivWrapper, aboutUsOurTeamLarryImg, aboutUsOurTeamLarryDiv, aboutUsOurTeanLianImg, aboutUsOurTeamLianDiv);
+    combine(aboutUsOurTeamDiv, aboutUsOurTeamH1, aboutUsOurTeamDivWrapper);
 
-    const ourMissionH1 = document.createElement("h1");
-    ourMissionH1.textContent = "Our Mission";
-    ourMission.appendChild(ourMissionH1); 
 
-    combine(body, ourTeam, contactInfo, ourMission);
-    console.log("testing");
+    const aboutUsContactInfoDiv = document.createElement("div");
+    const aboutUsOurMissionDiv = document.createElement("div");
+
+    combine(aboutUsPage, aboutUsOurTeamDiv, aboutUsContactInfoDiv, aboutUsOurMissionDiv);
+    combine(body, aboutUsPage);
+
 }
 
 main();
+aboutUsPage();
 
 

@@ -1,3 +1,8 @@
+:root {
+    --mainBodyDivHeight: 140vh;
+    --mainBodyDivWidth: 100vw;
+}
+
 * {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -51,6 +56,7 @@ button {
 #bodyContent {
     display: flex;
     align-items: center;
+
     width: var(--mainBodyDivWidth);
     height: var(--mainBodyDivHeight);
     background-color: #7895CB;
@@ -91,6 +97,40 @@ button {
     font-size: 16px;
 }
 
+.aboutUsPage {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    height: var(--mainBodyDivHeight);
+}
+
+.ourTeamDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ourTeamDivWrapper {
+    display: grid;
+    gap: 5vw;
+    border-radius: 50%;
+    width: 100vw;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.ourTeamDivWrapper img {
+    width: 25vh;
+    height: 25vh;
+    align-self: end;
+}
+
+.ourTeamDivWrapper div {
+    width: 40vw;
+}
+  
 .bodyMainDiv {
     display: grid;
     width: var(--mainBodyDivWidth);
