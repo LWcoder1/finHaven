@@ -45,11 +45,49 @@ function main() {
   aboutBtn.className = "aboutBtn";
   aboutBtn.textContent = "About Us";
 
+  const bodyMainDiv = document.createElement('div');
+  bodyMainDiv.className = "bodyMainDiv";
+
+  const bodyDivUL = document.createElement('div');
+  bodyDivUL.className = "bodyDiv";
+
+  const bodyDivUR = document.createElement('div');
+  bodyDivUR.className = "bodyDiv";
+
+  const bodyDivBL = document.createElement('div');
+  bodyDivBL.className = "bodyDiv";
+
+  const bodyDivBR = document.createElement('div');
+  bodyDivBR.className = "bodyDiv";
+
+  const infoParaHeaderUL = document.createElement('h2');
+  const infoParaUL = document.createElement('p');
+  infoParaHeaderUL.textContent = "Lorem ipsum schieun gradieun";
+  infoParaUL.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+  const infoParaHeaderBR = document.createElement('h2');
+  const infoParaBR = document.createElement('p');
+  infoParaHeaderBR.textContent = "Lorem ipsum schieun gradieun";
+  infoParaBR.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+  const infoImgUR = document.createElement('img');
+  infoImgUR.className = "infoImg";
+  infoImgUR.src = "../src/img/shark.jpeg";
+
+  const infoImgBL = document.createElement('img');
+  infoImgBL.className = "infoImg";
+  infoImgBL.src = "../src/img/shark.jpeg";
 
   combine(navBar, logoImg, logoName, btnContainer, loginBtn);
   combine(btnContainer, homeBtn, simBtn, aboutBtn);
-}
+  combine(body, bodyMainDiv);
+  combine(bodyMainDiv, bodyDivUL, bodyDivUR, bodyDivBL, bodyDivBR);
+  combine(bodyDivUL, infoParaHeaderUL, infoParaUL);
+  combine(bodyDivBR, infoParaHeaderBR, infoParaBR);
+  combine(bodyDivUR, infoImgUR);
+  combine(bodyDivBL, infoImgBL);
 
+}
 
 function aboutUsPage() {
     const ourTeam = document.createElement("div");

@@ -2,6 +2,11 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+:root {
+    --mainBodyDivHeight: 140vh;
+    --mainBodyDivWidth: 100vw;
+}
+
 body {
     margin: 0;
 }
@@ -46,8 +51,8 @@ button {
 #bodyContent {
     display: flex;
     align-items: center;
-    width: 100vw;
-    height: 90vh;
+    width: var(--mainBodyDivWidth);
+    height: var(--mainBodyDivHeight);
     background-color: #7895CB;
     margin: 0;
     padding: 0;
@@ -56,7 +61,7 @@ button {
 #footer {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: var(--mainBodyDivWidth);
     height: 10vh;
     background-color: #A0BFE0;
     margin: 0;
@@ -84,4 +89,30 @@ button {
     background-color: #C5DFF8;
     color: #4A55A2;
     font-size: 16px;
+}
+
+.bodyMainDiv {
+    display: grid;
+    width: var(--mainBodyDivWidth);
+    height: var(--mainBodyDivHeight);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.bodyDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.infoImg {
+    width: 20vw;
+    height: auto;
+    border-radius: 200px;
 }
