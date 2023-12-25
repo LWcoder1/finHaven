@@ -45,6 +45,10 @@ function main() {
   aboutBtn.className = "aboutBtn";
   aboutBtn.textContent = "About Us";
 
+  combine(navBar, logoImg, logoName, btnContainer, loginBtn);
+  combine(btnContainer, homeBtn, simBtn, aboutBtn);
+  combine(body, bodyMainDiv);
+
   const bodyMainDiv = document.createElement('div');
   bodyMainDiv.className = "bodyMainDiv";
 
@@ -78,14 +82,15 @@ function main() {
   infoImgBL.className = "infoImg";
   infoImgBL.src = "../src/img/shark.jpeg";
 
-  combine(navBar, logoImg, logoName, btnContainer, loginBtn);
-  combine(btnContainer, homeBtn, simBtn, aboutBtn);
-  combine(body, bodyMainDiv);
   combine(bodyMainDiv, bodyDivUL, bodyDivUR, bodyDivBL, bodyDivBR);
   combine(bodyDivUL, infoParaHeaderUL, infoParaUL);
   combine(bodyDivBR, infoParaHeaderBR, infoParaBR);
   combine(bodyDivUR, infoImgUR);
   combine(bodyDivBL, infoImgBL);
+
+}
+
+function loginPage() {
 
 }
 
@@ -124,7 +129,6 @@ function aboutUsPage() {
     ourMission.appendChild(ourMissionH1); 
 
     combine(body, ourTeam, contactInfo, ourMission);
-    console.log("testing");
 }
 
 main();
