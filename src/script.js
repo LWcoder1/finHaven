@@ -99,12 +99,17 @@ function aboutUsPage() {
 
 
     const aboutUsOurMissionDiv = objectClassCreator("div", "ourMissionDiv");
-    const aboutUsContactInfoDivH1 = objectTxtCreator("h1", "Our Mission");
-    const aboutUsContactInfoDivMessage = objectTxtCreator("p", "Our mission at FinHaven is rooted in our personal experiences as beginning developers and college freshmen in Computer Science. Having navigated the challenges of the high school application process ourselves, we understand the importance of informed decisions in shaping one's academic journey. That's why we have dedicated ourselves to creating an innovative app that empowers students by providing a comprehensive understanding of the choices they face. [Your App Name] aims to be a valuable resource, offering insights and support to students as they embark on their educational paths, ensuring they make well-informed decisions that pave the way for success in their academic pursuits.")
-    combine(aboutUsOurMissionDiv, aboutUsContactInfoDivH1, aboutUsContactInfoDivMessage);
+    const aboutUsOurMissionDivH1 = objectTxtCreator("h1", "Our Mission");
+    const aboutUsOurMissionDivMessage = objectTxtCreator("p", "Our mission at FinHaven is rooted in our personal experiences as beginning developers and college freshmen in Computer Science. Having navigated the challenges of the high school application process ourselves, we understand the importance of informed decisions in shaping one's academic journey. That's why we have dedicated ourselves to creating an innovative app that empowers students by providing a comprehensive understanding of the choices they face. [Your App Name] aims to be a valuable resource, offering insights and support to students as they embark on their educational paths, ensuring they make well-informed decisions that pave the way for success in their academic pursuits.")
+    combine(aboutUsOurMissionDiv, aboutUsOurMissionDivH1, aboutUsOurMissionDivMessage);
 
 
     const aboutUsContactInfoDiv = objectClassCreator("div", "contactInfoDiv");
+    const aboutUsContactInfoDivH1 = objectClassCreator("h1", "Contact us");
+    combine(aboutUsContactInfoDiv, aboutUsContactInfoDivH1);
+
+    
+
 
 
     combine(aboutUsPage, aboutUsOurTeamDiv, aboutUsOurMissionDiv, aboutUsContactInfoDiv);
