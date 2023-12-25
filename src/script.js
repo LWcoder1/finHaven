@@ -75,31 +75,42 @@ function aboutUsPage() {
 
     const aboutUsOurTeamLarryImg = document.createElement("img");
     aboutUsOurTeamLarryImg.src = "/Users/liangquanwu/teamProjects/finHaven/src/img/snakeImg.png";
-    const aboutUsOurTeanLianImg = document.createElement("img");
-    aboutUsOurTeanLianImg.src = "/Users/liangquanwu/teamProjects/finHaven/src/img/snakeImg.png";
+    const aboutUsOurTeamLianImg = document.createElement("img");
+    aboutUsOurTeamLianImg.src = "/Users/liangquanwu/teamProjects/finHaven/src/img/snakeImg.png";
 
+    const aboutUsOurTeamLarryWrapperDiv = document.createElement("div");
     const aboutUsOurTeamLarryDiv = document.createElement("div");
-    const aboutUsOurTeamLarryDivH1 = objectTxtCreator("h1", "Larry Wu")
+    const aboutUsOurTeamLarryDivH1 = objectTxtCreator("h2", "Larry Wu");
     const aboutUsOurTeamLarryDivP = objectTxtCreator("p", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque metus eros, condimentum sit amet augue vel, dictum porta justo. Proin dui enim, finibus quis volutpat id, bibendum sed dolor. Phasellus in libero elit. Duis condimentum imperdiet dignissim. Morbi justo massa, accumsan sit amet pellentesque ut, suscipit at ante. Vivamus varius quam vel finibus condimentum. Nunc posuere quam risus. Phasellus cursus consequat nulla sed pulvinar.");
     combine(aboutUsOurTeamLarryDiv, aboutUsOurTeamLarryDivH1, aboutUsOurTeamLarryDivP);
+    combine(aboutUsOurTeamLarryWrapperDiv, aboutUsOurTeamLarryImg, aboutUsOurTeamLarryDiv);
 
+    const aboutUsOurTeamLianWrapperDiv = document.createElement("div");
     const aboutUsOurTeamLianDiv = document.createElement("div");
-    const aboutUsOurTeamLianDivH1 = objectTxtCreator("h1", "Lian Jung")
+    const aboutUsOurTeamLianDivH1 = objectTxtCreator("h2", "Lian Jung")
     const aboutUsOurTeamLianDivP = objectTxtCreator("p", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque metus eros, condimentum sit amet augue vel, dictum porta justo. Proin dui enim, finibus quis volutpat id, bibendum sed dolor. Phasellus in libero elit. Duis condimentum imperdiet dignissim. Morbi justo massa, accumsan sit amet pellentesque ut, suscipit at ante. Vivamus varius quam vel finibus condimentum. Nunc posuere quam risus. Phasellus cursus consequat nulla sed pulvinar.");
     combine(aboutUsOurTeamLianDiv,aboutUsOurTeamLianDivH1, aboutUsOurTeamLianDivP);
+    combine(aboutUsOurTeamLianWrapperDiv, aboutUsOurTeamLianImg, aboutUsOurTeamLianDiv);
 
-    combine(aboutUsOurTeamDivWrapper, aboutUsOurTeamLarryImg, aboutUsOurTeamLarryDiv, aboutUsOurTeanLianImg, aboutUsOurTeamLianDiv);
+
+    combine(aboutUsOurTeamDivWrapper, aboutUsOurTeamLarryWrapperDiv, aboutUsOurTeamLianWrapperDiv);
     combine(aboutUsOurTeamDiv, aboutUsOurTeamH1, aboutUsOurTeamDivWrapper);
 
 
-    const aboutUsContactInfoDiv = document.createElement("div");
-    const aboutUsOurMissionDiv = document.createElement("div");
 
-    combine(aboutUsPage, aboutUsOurTeamDiv, aboutUsContactInfoDiv, aboutUsOurMissionDiv);
+    const aboutUsOurMissionDiv = objectClassCreator("div", "ourMissionDiv");
+    const aboutUsContactInfoDivH1 = objectTxtCreator("h1", "Our Mission");
+    const aboutUsContactInfoDivMessage = objectTxtCreator("p", "Our mission at FinHaven is rooted in our personal experiences as beginning developers and college freshmen in Computer Science. Having navigated the challenges of the high school application process ourselves, we understand the importance of informed decisions in shaping one's academic journey. That's why we have dedicated ourselves to creating an innovative app that empowers students by providing a comprehensive understanding of the choices they face. [Your App Name] aims to be a valuable resource, offering insights and support to students as they embark on their educational paths, ensuring they make well-informed decisions that pave the way for success in their academic pursuits.")
+    combine(aboutUsOurMissionDiv, aboutUsContactInfoDivH1, aboutUsContactInfoDivMessage);
+
+
+    const aboutUsContactInfoDiv = objectClassCreator("div", "contactInfoDiv");
+
+
+    combine(aboutUsPage, aboutUsOurTeamDiv, aboutUsOurMissionDiv, aboutUsContactInfoDiv);
     combine(body, aboutUsPage);
 
 }
-
 main();
 aboutUsPage();
 
