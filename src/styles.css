@@ -1,5 +1,5 @@
 :root {
-    --mainBodyDivHeight: 140vh;
+    --mainBodyDivHeight: 180vh;
     --mainBodyDivWidth: 100vw;
 }
 
@@ -98,9 +98,8 @@ button {
 }
 
 .aboutUsPage {
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: var(--mainBodyDivHeight);
 }
@@ -112,23 +111,82 @@ button {
 }
 
 .ourTeamDivWrapper {
-    display: grid;
     gap: 5vw;
     border-radius: 50%;
     width: 100vw;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+}
+
+.ourTeamDivWrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin-bottom: 5vh;
 }
 
 .ourTeamDivWrapper img {
     width: 25vh;
     height: 25vh;
-    align-self: end;
 }
 
-.ourTeamDivWrapper div {
+.ourTeamDivWrapper div div {
     width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.ourMissionDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ourMissionDiv p {
+    width: 70vw;
+    font-size: 20px;
+}
+
+.contactInfoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sendEmailDiv {
+    width: 40vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 10px;
+    border: 5px black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+}
+
+.sendEmailDiv div input {
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    margin: 2px;
+    width: 23vw;
+}
+
+
+.sendEmailDiv div textArea {
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    margin: 2px;
+    width: 21vw;
+    height: 20vh;
+}
+
+.sendEmailDiv button {
+    margin-top: 10vh;
+    height: 5vh;
+    width: 15vw;
 }
   
 .bodyMainDiv {
