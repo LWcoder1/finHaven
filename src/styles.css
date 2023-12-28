@@ -92,9 +92,8 @@ button {
 }
 
 .aboutUsPage {
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: var(--mainBodyDivHeight);
 }
@@ -139,4 +138,47 @@ button {
 .ourMissionDiv p {
     width: 70vw;
     font-size: 20px;
+}
+
+.contactInfoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sendEmailDiv {
+    width: 40vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 10px;
+    border: 5px black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: right;
+}
+
+.sendEmailDiv div input {
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    margin: 2px;
+    width: 23vw;
+}
+
+
+.sendEmailDiv div textArea {
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    margin: 2px;
+    width: 21vw;
+    height: 20vh;
+}
+
+.sendEmailDiv button {
+    margin-top: 10vh;
+    height: 5vh;
+    width: 15vw;
 }

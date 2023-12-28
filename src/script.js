@@ -100,13 +100,40 @@ function aboutUsPage() {
 
     const aboutUsOurMissionDiv = objectClassCreator("div", "ourMissionDiv");
     const aboutUsOurMissionDivH1 = objectTxtCreator("h1", "Our Mission");
-    const aboutUsOurMissionDivMessage = objectTxtCreator("p", "Our mission at FinHaven is rooted in our personal experiences as beginning developers and college freshmen in Computer Science. Having navigated the challenges of the high school application process ourselves, we understand the importance of informed decisions in shaping one's academic journey. That's why we have dedicated ourselves to creating an innovative app that empowers students by providing a comprehensive understanding of the choices they face. [Your App Name] aims to be a valuable resource, offering insights and support to students as they embark on their educational paths, ensuring they make well-informed decisions that pave the way for success in their academic pursuits.")
+    const aboutUsOurMissionDivMessage = objectTxtCreator("p", "Our mission at FinHaven is rooted in our personal experiences as beginning developers and college freshmen in Computer Science. Having navigated the challenges of the high school application process ourselves, we understand the importance of informed decisions in shaping one's academic journey. That's why we have dedicated ourselves to creating an innovative app that empowers students by providing a comprehensive understanding of the choices they face. FinHaven aims to be a valuable resource, offering insights and support to students as they embark on their educational paths, ensuring they make well-informed decisions that pave the way for success in their academic pursuits.")
     combine(aboutUsOurMissionDiv, aboutUsOurMissionDivH1, aboutUsOurMissionDivMessage);
 
 
     const aboutUsContactInfoDiv = objectClassCreator("div", "contactInfoDiv");
-    const aboutUsContactInfoDivH1 = objectClassCreator("h1", "Contact us");
-    combine(aboutUsContactInfoDiv, aboutUsContactInfoDivH1);
+    const aboutUsContactInfoDivH1 = objectTxtCreator("h1", "Contact Information: ");
+
+    const aboutUsSendEmailDiv = objectClassCreator("div", "sendEmailDiv")
+    
+    const aboutUsOurMissionDivTitle = objectTxtCreator("h3", "Email Us:");
+
+    const sendEmailNameWrap = document.createElement("div");
+    const sendEmailNameTitle = objectTxtCreator("label", "Name: ");
+    const sendEmailName = document.createElement("input");
+    combine(sendEmailNameWrap, sendEmailNameTitle, sendEmailName)
+
+    const sendEmailEmailWrap = document.createElement("div");
+    const sendEmailEmailTitle = objectTxtCreator("label", "Email: ");
+    const sendEmailEmail = document.createElement("input");
+    combine(sendEmailEmailWrap, sendEmailEmailTitle, sendEmailEmail);
+
+
+    const sendEmailMsgWrap = document.createElement("div");
+    const sendEmailMsgTitle = objectTxtCreator("label", "Message: ");
+    const sendEmailMessage = document.createElement("textarea");
+    combine(sendEmailMsgWrap, sendEmailMsgTitle, sendEmailMessage);
+
+
+    const submitEmail = objectTxtCreator("button", "send");
+
+    combine(aboutUsSendEmailDiv, aboutUsOurMissionDivTitle, sendEmailNameWrap, sendEmailEmailWrap, sendEmailMsgWrap, submitEmail);
+
+
+    combine(aboutUsContactInfoDiv, aboutUsContactInfoDivH1, aboutUsSendEmailDiv);
 
     
 
