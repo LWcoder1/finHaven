@@ -60,6 +60,10 @@ function main() {
   const bodyMainDiv = document.createElement('div');
   bodyMainDiv.className = "bodyMainDiv";
 
+  combine(navBar, logoImg, logoName, btnContainer, loginBtn);
+  combine(btnContainer, homeBtn, simBtn, aboutBtn);
+  combine(body, bodyMainDiv);
+
   const bodyDivUL = document.createElement('div');
   bodyDivUL.className = "bodyDiv";
 
@@ -90,15 +94,100 @@ function main() {
   infoImgBL.className = "infoImg";
   infoImgBL.src = "../src/img/shark.jpeg";
 
-  combine(navBar, logoImg, logoName, btnContainer, loginBtn);
-  combine(btnContainer, homeBtn, simBtn, aboutBtn);
-  combine(body, bodyMainDiv);
   combine(bodyMainDiv, bodyDivUL, bodyDivUR, bodyDivBL, bodyDivBR);
   combine(bodyDivUL, infoParaHeaderUL, infoParaUL);
   combine(bodyDivBR, infoParaHeaderBR, infoParaBR);
   combine(bodyDivUR, infoImgUR);
   combine(bodyDivBL, infoImgBL);
 
+}
+
+function loginPage() {
+  const loginPage = objectClassCreator("div", "loginPage");
+
+  const loginDiv = objectClassCreator("div", "loginDiv");
+
+  const signupDiv = objectClassCreator("div", "signupDiv");
+  signupDiv.classList.add("hide");
+
+  combine(body, loginPage);
+  combine(loginPage, loginDiv, signupDiv);
+
+  const loginForm = objectClassCreator("form", "loginForm");
+
+  const loginTitle = objectTxtCreator("h1", "Login");
+
+  const loginUsernameInput = document.createElement("input");
+  loginUsernameInput.setAttribute("id", "loginUsername");
+  loginUsernameInput.setAttribute("type", "text");
+  loginUsernameInput.setAttribute("name", "loginUsername");
+  loginUsernameInput.setAttribute("placeholder", "Username");
+
+  const loginPasswordInput = document.createElement("input");
+  loginPasswordInput.setAttribute("id", "loginPassword");
+  loginPasswordInput.setAttribute("type", "password");
+  loginPasswordInput.setAttribute("name", "loginPassword");
+  loginPasswordInput.setAttribute("placeholder", "Password");
+
+  const switchSignup = document.createElement("p");
+  switchSignup.textContent = "Don't have an account? ";
+  const switchSignupLink = document.createElement("span");
+  switchSignupLink.setAttribute("class", "switchSignupLink");
+  switchSignupLink.textContent = "Sign up";
+
+  switchSignupLink.addEventListener("click", () => {
+    loginDiv.classList.add("hide");
+    signupDiv.classList.remove("hide");
+  })
+
+  const loginButton = objectClassCreator("button", "loginButton");
+  loginButton.textContent = "Log in";
+  loginButton.setAttribute("onclick", "login()");
+  
+  combine(switchSignup, switchSignupLink);
+  combine(loginDiv, loginForm);
+  combine(loginForm, loginTitle, loginUsernameInput, loginPasswordInput, switchSignup, loginButton);
+
+  const signupForm = objectClassCreator("form", "signupForm");
+
+  const signupTitle = objectTxtCreator("h1", "Sign up");
+
+  const signupEmailInput = document.createElement("input");
+  signupEmailInput.setAttribute("id", "signupEmail");
+  signupEmailInput.setAttribute("type", "text");
+  signupEmailInput.setAttribute("name", "signupEmail");
+  signupEmailInput.setAttribute("placeholder", "Email Address");
+  
+  const signupPasswordInput = document.createElement("input");
+  signupPasswordInput.setAttribute("id", "signupPassword");
+  signupPasswordInput.setAttribute("name", "signupPassword");
+  signupPasswordInput.setAttribute("type", "password");
+  signupPasswordInput.setAttribute("placeholder", "Create Password");
+
+  const signupPasswordConfirmInput = document.createElement("input");
+  signupPasswordConfirmInput.setAttribute("id", "signupPasswordConfirm");
+  signupPasswordConfirmInput.setAttribute("name", "signupPasswordConfirm");
+  signupPasswordConfirmInput.setAttribute("type", "password");
+  signupPasswordConfirmInput.setAttribute("placeholder", "Confirm Password");
+
+  const switchLogin = document.createElement("p");
+  switchLogin.textContent = "Already have an account? ";
+  const switchLoginLink = document.createElement("span");
+  switchLoginLink.setAttribute("class", "switchLoginLink");
+  switchLoginLink.textContent = "Login";
+
+  switchLoginLink.addEventListener("click", () => {
+    signupDiv.classList.add("hide");
+    loginDiv.classList.remove("hide");
+  })
+
+  const signupButton = objectClassCreator("button", "signupButton");
+  signupButton.textContent = "Sign up";
+  signupButton.setAttribute("onclick", "signup()");
+
+  combine(switchLogin, switchLoginLink);
+  combine(signupDiv, signupForm);
+  combine(signupForm, signupTitle, signupEmailInput, signupPasswordInput, signupPasswordConfirmInput, switchLogin, signupButton);
 }
 
 function aboutUsPage() {
@@ -109,12 +198,12 @@ function aboutUsPage() {
     const aboutUsOurTeamH1 = objectTxtCreator("h1", "Our Team")
 
     const aboutUsOurTeamDivWrapper = objectClassCreator("div", "ourTeamDivWrapper");
-    
 
     const aboutUsOurTeamLarryImg = document.createElement("img");
-    aboutUsOurTeamLarryImg.src = "/Users/liangquanwu/teamProjects/finHaven/src/img/snakeImg.png";
-    const aboutUsOurTeamLianImg = document.createElement("img");
-    aboutUsOurTeamLianImg.src = "/Users/liangquanwu/teamProjects/finHaven/src/img/snakeImg.png";
+  
+    aboutUsOurTeamLarryImg.src = "../src/img/snakeImg.png";
+    const aboutUsOurTeanLianImg = document.createElement("img");
+    aboutUsOurTeanLianImg.src = "../src/img/snakeImg.png";
 
     const aboutUsOurTeamLarryWrapperDiv = document.createElement("div");
     const aboutUsOurTeamLarryDiv = document.createElement("div");
@@ -182,6 +271,7 @@ function aboutUsPage() {
 
 }
 main();
+loginPage();
 aboutUsPage();
 
 
