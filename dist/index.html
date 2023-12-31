@@ -7,25 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="sendEmail()"></button>
+
     <script src="main.js" defer></script>
-    <script src=" https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "larrywu2111@gmail.com",
-                Password : "F94EE67AD98B4B85E98174C2B0635B5B14D7",
-                To : 'wutesting821@gmail.com',
-                From : "larrywu2111@gmail.com",
-                Subject : "This is the subject",
-                Body : "And this is the body"
-            }).then(
-                message => alert(message)
-            ).catch(
-                error => console.error("Error:", error)
-            );
-        }
-    </script>
+ 
 </body>
 </html>
