@@ -1,14 +1,10 @@
-:root {
-    --mainBodyDivHeight: 200vh;
-    --mainBodyDivWidth: 100vw;
-}
 
 * {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 :root {
-    --mainBodyDivHeight: 140vh;
+    --mainBodyDivHeight: 170vh;
     --mainBodyDivWidth: 100vw;
     --linkColor: #3366CC;
 }
@@ -29,6 +25,7 @@ button {
     border-radius: 10px;
     color: black;
 }
+
 
 #navBar {
     display: flex;
@@ -51,6 +48,10 @@ button {
     width: 30vw;
     height: 7.5vh;
     flex: 2;
+}
+
+#btnContainer button:hover {
+    background-color: white;
 }
 
 #btnContainer button {
@@ -101,6 +102,10 @@ button {
     background-color: #C5DFF8;
     color: #4A55A2;
     font-size: 16px;
+}
+
+.loginBtn:hover {
+     background-color: white;
 }
 
 .aboutUsPage {
@@ -205,6 +210,11 @@ button {
 }
 
 .bodyMainDiv {
+    width: var(--mainBodyDivWidth);
+    height: var(--mainBodyDivHeight);
+}
+
+.homeDiv {
     display: grid;
     width: var(--mainBodyDivWidth);
     height: var(--mainBodyDivHeight);
