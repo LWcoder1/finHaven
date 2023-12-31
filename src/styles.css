@@ -1,5 +1,5 @@
 :root {
-    --mainBodyDivHeight: 180vh;
+    --mainBodyDivHeight: 200vh;
     --mainBodyDivWidth: 100vw;
 }
 
@@ -173,12 +173,21 @@ button {
     border: none;
     border-radius: 5px;
     margin: 2px;
-    width: 21vw;
+    width: 23vw;
     height: 20vh;
 }
 
 .sendEmailDiv button {
-    margin-top: 10vh;
     height: 5vh;
-    width: 15vw;
+    width: 23vw;
+    margin-left: 3vw;
+}
+
+.sendEmailDiv button:hover {
+    background-color: darkgray;
+}
+
+.sendEmailMsgWrap {
+    margin-right: 1.1vw;
+    display: flex;
 }

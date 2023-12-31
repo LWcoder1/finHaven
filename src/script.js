@@ -119,11 +119,12 @@ function aboutUsPage() {
     const sendEmailEmailWrap = document.createElement("div");
     const sendEmailEmailTitle = objectTxtCreator("label", "Email: ");
     const sendEmailEmail = document.createElement("input");
+    
     combine(sendEmailEmailWrap, sendEmailEmailTitle, sendEmailEmail);
 
 
-    const sendEmailMsgWrap = document.createElement("div");
-    const sendEmailMsgTitle = objectTxtCreator("label", "Message: ");
+    const sendEmailMsgWrap = objectClassCreator("div", "sendEmailMsgWrap");
+    const sendEmailMsgTitle = objectTxtCreator("label", "Message:  ");
     const sendEmailMessage = document.createElement("textarea");
     combine(sendEmailMsgWrap, sendEmailMsgTitle, sendEmailMessage);
 
@@ -135,15 +136,11 @@ function aboutUsPage() {
 
     combine(aboutUsContactInfoDiv, aboutUsContactInfoDivH1, aboutUsSendEmailDiv);
 
-    
-
-
-
     combine(aboutUsPage, aboutUsOurTeamDiv, aboutUsOurMissionDiv, aboutUsContactInfoDiv);
     combine(body, aboutUsPage);
 
 }
+
 main();
-aboutUsPage();
 
 
